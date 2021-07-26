@@ -134,7 +134,8 @@
         android:layout_height="99dp"
         android:timePickerMode="spinner"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="284dp" />
+        tools:layout_editor_absoluteY="284dp"
+        tools:ignore="MissingConstraints" />
 
 
     <ImageView
