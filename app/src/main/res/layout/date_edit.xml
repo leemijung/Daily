@@ -31,25 +31,27 @@
         tools:layout_editor_absoluteY="122dp" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/plus"
 
+        android:src="@drawable/plus"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteX="108dp"
         tools:layout_editor_absoluteY="475dp" />
 
     <TextView
         android:id="@+id/congratulate_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="알람 설정"
         android:textColor="@color/white"
         android:textSize="17dp"
         android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tp_timepicker"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="416dp" />
+        tools:layout_editor_absoluteX="30dp" />
 
     <Button
         android:id="@+id/button1"
@@ -81,12 +83,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
         android:text="종류 추가"
         android:textColor="@color/white"
         android:textSize="17dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="475dp" />
 
     <Button
@@ -138,10 +141,11 @@
         android:id="@+id/imageView"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/palette"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_color_vector"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="600dp" />
+        tools:layout_editor_absoluteY="597dp" />
 
     <Button
         android:id="@+id/button3"
@@ -161,24 +165,26 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:text="컬러"
         android:textColor="@color/white"
         android:textSize="17dp"
         android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="597dp" />
+        tools:layout_editor_absoluteX="29dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="일정 종류"
         android:textColor="@color/white"
         android:textSize="17dp"
         android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="529dp" />
+        tools:layout_editor_absoluteX="28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
