@@ -1,5 +1,6 @@
 package com.example.main
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
@@ -20,6 +21,7 @@ class SettingsActivity : AppCompatActivity() {
 
 
     class SettingsFragment : PreferenceFragmentCompat() {
+        @SuppressLint("ResourceType")
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
         }

@@ -8,194 +8,219 @@
     android:background="@color/background5"
     android:id="@+id/settings">
 
-    <FrameLayout
-        android:id="@+id/frame"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UnknownId" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="316dp"
-        android:text="일정제목"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="350dp"
-        android:layout_height="30dp"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="122dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-
-        android:src="@drawable/plus"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="475dp" />
-
-    <TextView
-        android:id="@+id/congratulate_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="알람 설정"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tp_timepicker"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="저장"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/alarm_stream"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tp_timepicker"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:text="종류 추가"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="475dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="취소"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="일정 세부사항"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="350dp"
-        android:layout_height="30dp"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="199dp" />
-
-    <TimePicker
-        android:id="@+id/tp_timepicker"
-        android:layout_width="282dp"
-        android:layout_height="99dp"
-        android:timePickerMode="spinner"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="284dp"
-        tools:ignore="MissingConstraints" />
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="12dp"
-        android:src="@drawable/ic_color_vector"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="597dp" />
-
-    <Button
-        android:id="@+id/button3"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="일정삭제"
-        android:textColor="@color/color_primary"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-37dp">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="컬러"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="29dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="21dp"
+            android:text="일정 세부사항"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="일정 종류"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:layout_above="@+id/button3"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="38dp"
+            android:layout_toEndOf="@+id/textView"
+            android:src="@drawable/plus"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="39dp"
+            android:text="종류 추가"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@+id/button2"
+            android:background="@android:color/transparent"
+            android:text="저장"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_above="@+id/button3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="326dp"
+            android:layout_marginBottom="86dp"
+            android:layout_toEndOf="@+id/textView3"
+            android:src="@drawable/ic_color_vector"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/congratulate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="331dp"
+            android:layout_marginBottom="254dp"
+            android:text="알람 설정"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tp_timepicker"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="9dp"
+            android:text="@string/alarm_stream"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TimePicker
+            android:id="@+id/tp_timepicker"
+            android:layout_width="282dp"
+            android:layout_height="99dp"
+            android:layout_above="@+id/button3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="138dp"
+            android:timePickerMode="spinner"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="128dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="11dp"
+            android:background="@android:color/transparent"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="316dp"
+            android:text="일정제목"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="85dp"
+            android:text="컬러"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/congratulate_txt"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="239dp"
+            android:layout_marginEnd="328dp"
+            android:layout_marginBottom="38dp"
+            android:text="일정 종류"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-1dp"
+            android:background="@color/white"
+            android:text="일정삭제"
+            android:textColor="@color/color_primary"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="47dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
