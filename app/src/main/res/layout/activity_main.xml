@@ -39,11 +39,12 @@
         android:background="@drawable/round"
         android:backgroundTint="@color/background2">
 
-        <CalendarView
-            android:id="@+id/calendarView"
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/main_calendarView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top" />
+            android:layout_height="300dp"
+            android:layout_gravity="center|top"
+            app:mcv_showOtherDates="all"/>
 
         <FrameLayout
             android:layout_width="match_parent"
