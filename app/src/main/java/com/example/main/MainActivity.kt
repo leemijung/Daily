@@ -1,21 +1,30 @@
 package com.example.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.CalendarMode
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val calendarView :MaterialCalendarView=findViewById(R.id.main_calendarView)
 
+
+        plusButton.setOnClickListener{
+            val intent= Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
         //var startTimeCalendar = Calendar.getInstance()
         //var endTimeCalendar = Calendar.getInstance()
 
