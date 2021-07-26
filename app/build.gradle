@@ -67,6 +67,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -87,6 +90,7 @@ dependencies {
     implementation "com.prolificinteractive:material-calendarview:1.4.3"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     testImplementation 'junit:junit:4.+'
     kapt 'androidx.room:room-compiler:2.3.0'
     implementation 'androidx.room:room-runtime:2.3.0'
