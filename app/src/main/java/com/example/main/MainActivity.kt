@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     var todoActivity: TodoActivity? = null
     var calendarActivity: calendar_fragment? = null
-    var diaryActivity: DiaryActivity? = null
+    var diaryActivity: diary_fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,23 +24,24 @@ class MainActivity : AppCompatActivity() {
 
         todoActivity = TodoActivity()
         calendarActivity = calendar_fragment()
-        diaryActivity = DiaryActivity()
+        diaryActivity = diary_fragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_container, calendarActivity!!).commit()
         val bottom_menu = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottom_menu.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            //하단 메뉴바 아이콘에 따라 화면 이동 (아직 todolist 구현 안됨)
             when (item.itemId) {
 //                R.id.todo -> {
 //                    supportFragmentManager.beginTransaction().replace(R.id.container, todoActivity!!).commit()
 //                    return@OnNavigationItemSelectedListener true
 //                }
                 R.id.calendar -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.container, calendarActivity!!).commit()
+                    supportFragmentManager.beginTransaction().replace(R.id.main_container, calendarActivity!!).commit()
                     return@OnNavigationItemSelectedListener true
                 }
-//                R.id.diary -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.container, diaryActivity!!).commit()
-//                    return@OnNavigationItemSelectedListener true
-//                }
+                R.id.diary -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_container, diaryActivity!!).commit()
+                    return@OnNavigationItemSelectedListener true
+                }
             }
             false
         })
