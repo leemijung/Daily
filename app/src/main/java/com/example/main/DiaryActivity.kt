@@ -14,11 +14,6 @@ class DiaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary)
 
-//        val contents = arrayListOf<OnedayDiary>()
-//        for (i in 0..30){
-//            contents.add(OnedayDiary("영화 본 날"))
-//        }
-
         val onedayList = arrayListOf(
             OnedayDiary("영화 본 날"),
             OnedayDiary("책 읽은 날"),

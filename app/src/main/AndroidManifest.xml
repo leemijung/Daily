@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".DiarySubActivity"></activity>
+        <activity android:name=".diarylist.DiarySubActivity2"></activity>
+        <activity android:name=".diarylist.DiaryActivity2" />
+        <activity android:name=".DiarySubActivity" />
         <activity android:name=".DiaryActivity" />
         <activity
             android:name=".SettingsActivity"
