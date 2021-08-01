@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.example.main.todo.TodoActivity
+import com.example.main.todo.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -13,8 +13,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-
-    var todoActivity: TodoActivity? = null
+    var todoActivity: todo_fragment? = null
     var calendarActivity: calendar_fragment? = null
     var diaryActivity: diary_fragment? = null
 
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        todoActivity = TodoActivity()
+        todoActivity = todo_fragment()
         calendarActivity = calendar_fragment()
         diaryActivity = diary_fragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_container, calendarActivity!!).commit()
@@ -30,10 +29,10 @@ class MainActivity : AppCompatActivity() {
         bottom_menu.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             //하단 메뉴바 아이콘에 따라 화면 이동 (아직 todolist 구현 안됨)
             when (item.itemId) {
-//                R.id.todo -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.container, todoActivity!!).commit()
-//                    return@OnNavigationItemSelectedListener true
-//                }
+                R.id.todo -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_container, todoActivity!!).commit()
+                    return@OnNavigationItemSelectedListener true
+                }
                 R.id.calendar -> {
                     supportFragmentManager.beginTransaction().replace(R.id.main_container, calendarActivity!!).commit()
                     return@OnNavigationItemSelectedListener true

@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.main.R
-import kotlinx.android.synthetic.main.todo_main.*
+import kotlinx.android.synthetic.main.activity_todo.*
+import kotlinx.android.synthetic.main.activity_todo.today_list
+import kotlinx.android.synthetic.main.activity_todo.todo_add
+import kotlinx.android.synthetic.main.activity_todo.todo_input
+import kotlinx.android.synthetic.main.fragment_todo_fragment.*
 
 
 class TodoActivity : AppCompatActivity() {
@@ -17,7 +23,7 @@ class TodoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) { //앱이 최초 실행 됐을 때 수행
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) //xml 화면 뷰 연결
+        setContentView(R.layout.activity_todo) //xml 화면 뷰 연결
 
         //뷰모델 받아오기
         viewModel = ViewModelProvider(this, ViewModelProviderFactory(this.application))
@@ -33,8 +39,9 @@ class TodoActivity : AppCompatActivity() {
         todayAdapter = TodoAdapter(this, mutableListOf<Todo>(), viewModel,::setList)
 
         //recycler view에 adapter와 layout manager 넣기
+        today_list.setHasFixedSize(true)
         today_list.adapter = todayAdapter
-        today_list.layoutManager = LinearLayoutManager(this)
+        today_list.layoutManager = GridLayoutManager(this,1,RecyclerView.VERTICAL,false)//LinearLayoutManager(this)
 
         //Todo추가
         todo_add.setOnClickListener {
