@@ -4,23 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="mainModel"
             type="com.example.main.diarylist.viewmodel.MainModel"/>
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@color/white"
+        android:background="@color/background1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.main.diarylist.DiaryFragment2">
         <androidx.appcompat.widget.Toolbar
-            android:background="@color/white"
+
             android:elevation="4dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
             android:id="@+id/mainToolbar"
             app:contentInsetStart="0dp"
             android:layout_width="match_parent"
@@ -28,22 +25,44 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:text="오늘의 다이어리"
-                android:textColor="@color/black"
-                android:textSize="25dp"/>
+                android:text="Diary"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textSize="40dp"/>
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
-            android:id="@+id/recyclerView"
+        <ScrollView
+            android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/background2"
+            app:layout_constraintTop_toBottomOf="@+id/mainToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addNewTodoFab"
+            android:layout_marginBottom="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_add"

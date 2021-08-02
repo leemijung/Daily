@@ -26,7 +26,6 @@ import java.util.*
 
 class diary2_fragment : Fragment() {
 
-    private lateinit var binding : ActivityDiary2Binding
     private lateinit var todies : Vector<Diary>
     private lateinit var adapter : DiaryAdapter
 
@@ -43,10 +42,6 @@ class diary2_fragment : Fragment() {
         val daylist: RecyclerView = rootView.findViewById(R.id.recyclerView) as RecyclerView
         val addNewTodoFab: FloatingActionButton = rootView.findViewById(R.id.addNewTodoFab) as FloatingActionButton
 
-        //val view = binding.root
-        //binding.setMarsdata(data)
-        //val daylist: RecyclerView = rootView.findViewById(R.id.daylist) as RecyclerView
-        //binding = DataBindingUtil.setContentView(context as Activity, MAIN)
         daylist.layoutManager =
             LinearLayoutManager(
                 context,
@@ -81,47 +76,8 @@ class diary2_fragment : Fragment() {
             }
         }
 
-        //mainModel = MainModel(context as AppCompatActivity, context as Activity)
-        //binding.executePendingBindings()
-
         return rootView
     }
-
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        binding = DataBindingUtil.setContentView(DiaryActivity2, MAIN)
-//        binding.recyclerView.layoutManager =
-//            LinearLayoutManager(
-//                requireContext(),
-//                LinearLayoutManager.VERTICAL,
-//                false
-//            )
-//        todies = Vector()
-//        val openHelper = DiaryOpenHelper(requireContext())
-//        val db = openHelper.writableDatabase
-//        val cursor = db.rawQuery("select * from diarylist", null)
-//
-//        val count = cursor.count
-//        if (count >= 1) {
-//            while (cursor.moveToNext()) {
-//                val title = cursor.getString(0)
-//                val time = cursor.getString(2)
-//                todies.add(Diary(title, time))
-//            }
-//        } else {
-//            todies.add(Diary("등록된 다이어리가 없습니다.", ""))
-//        }
-//
-//        cursor.close()
-//        adapter = DiaryAdapter(todies, requireContext())
-//        binding.recyclerView.adapter = adapter
-//
-//        binding.mainModel = MainModel(requireContext() as AppCompatActivity, requireContext())
-//        binding.executePendingBindings()
-//
-//
-//    }
 
 
     companion object {

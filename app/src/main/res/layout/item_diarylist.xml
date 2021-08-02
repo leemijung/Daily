@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@color/white"
         android:layout_margin="4dp"
         android:elevation="4dp"
         android:layout_width="match_parent"
@@ -12,8 +12,9 @@
         <TextView
             android:id="@+id/todoTitleTv"
             android:layout_width="0dp"
-            android:layout_height="72dp"
+            android:layout_height="wrap_content"
             android:gravity="center|start"
+            android:textSize="18sp"
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
             android:textColor="#000000"
