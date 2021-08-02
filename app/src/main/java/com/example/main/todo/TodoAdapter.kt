@@ -13,6 +13,7 @@ import com.example.main.R
 import kotlinx.android.synthetic.main.todolist_item.view.*
 import com.example.main.todo.Todo
 import com.example.main.todo.TodoViewModel
+import java.util.*
 
 class TodoAdapter(val context: Context,
                   var itemList: MutableList<Todo>,
@@ -72,6 +73,8 @@ class TodoAdapter(val context: Context,
             setList()
         }
     }
+
+
 
     class CustomViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView) {
         val todoText = itemView.todo_text

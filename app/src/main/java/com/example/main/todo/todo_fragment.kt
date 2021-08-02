@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.main.R
 import kotlinx.android.synthetic.main.activity_todo.*
@@ -53,6 +54,7 @@ class todo_fragment : Fragment() {
         })
 
         todayAdapter = TodoAdapter(requireContext(), mutableListOf<Todo>(), viewModel,::setList)
+
 
         //today_list.setHasFixedSize(true)
 //        recycler view에 adapter와 layout manager 넣기
@@ -97,6 +99,7 @@ class todo_fragment : Fragment() {
             }
         }
     }
+
     fun setList(){
         todoList.value = viewModel.getList(viewModel.isTimeOrder)
     }

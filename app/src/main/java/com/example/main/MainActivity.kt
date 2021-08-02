@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
         diaryActivity = diary_fragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_container, calendarActivity!!).commit()
         val bottom_menu = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottom_menu.setSelectedItemId(R.id.calendar);
         bottom_menu.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
-            //하단 메뉴바 아이콘에 따라 화면 이동 (아직 todolist 구현 안됨)
+            //하단 메뉴바 아이콘에 따라 화면 이동
             when (item.itemId) {
                 R.id.todo -> {
                     supportFragmentManager.beginTransaction().replace(R.id.main_container, todoActivity!!).commit()
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
             false
         })
+
     }
 }
 
