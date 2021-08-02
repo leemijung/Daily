@@ -3,7 +3,6 @@
     <item
         android:id="@+id/todo"
         android:icon="@drawable/todo_icon"
-        android:enabled="true"
         android:title="todo list" />
 
     <item
