@@ -31,9 +31,11 @@ class DiarySubActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, TODO)
+        //메인으로 가는 버튼 클릭시
         binding.goMainIv.setOnClickListener {
             finish()
         }
+        //저장버튼 클릭시 db에 저장
         binding.addNoteIv.setOnClickListener {
             val title = binding.titleEt.text
             val content = binding.todoContentEt.text
@@ -52,7 +54,7 @@ class DiarySubActivity2 : AppCompatActivity() {
         }
     }
 
-
+    //뒤로가기 눌렀을때 가는 화면
     override fun onBackPressed() {
         startActivity(Intent(this, DiaryActivity2::class.java))
         finish()

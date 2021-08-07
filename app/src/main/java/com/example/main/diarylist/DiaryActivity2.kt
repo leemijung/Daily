@@ -42,11 +42,12 @@ class DiaryActivity2 : AppCompatActivity() {
         if (count >= 1) {
             while (cursor.moveToNext()) {
                 val title = cursor.getString(0)
+                val content = cursor.getString(1)
                 val time = cursor.getString(2)
-                todies.add(Diary(title, time))
+                todies.add(Diary(title, content, time))
             }
         } else {
-            todies.add(Diary("등록된 다이어리가 없습니다.", ""))
+            todies.add(Diary("등록된 다이어리가 없습니다.", "",""))
         }
 
         cursor.close()
