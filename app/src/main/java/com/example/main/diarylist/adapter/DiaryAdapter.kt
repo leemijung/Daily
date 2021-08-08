@@ -33,9 +33,10 @@ class DiaryAdapter(private var todos: Vector<Diary>, private val context: Contex
         //리사이클러뷰 아이템 누르면 편집화면으로 이동
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView?.context, DiarySubActivity2::class.java)
-            intent.putExtra("content", "데이터 보냄")
-           intent.putExtra("no", 111)
-            val no=intent.getLongExtra("no", -1)
+            val title1 = binding.todoTitleTv.getText().toString();
+            val content1 = binding.diaryContentTv.getText().toString();
+            intent.putExtra("title1",title1)
+            intent.putExtra("content1",content1)
             ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
 

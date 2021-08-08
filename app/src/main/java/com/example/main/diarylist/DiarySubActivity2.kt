@@ -31,6 +31,7 @@ class DiarySubActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, TODO)
+
         //메인으로 가는 버튼 클릭시
         binding.goMainIv.setOnClickListener {
             finish()
@@ -52,6 +53,28 @@ class DiarySubActivity2 : AppCompatActivity() {
                 startActivity(Intent(this, MainActivity::class.java))
             }
         }
+        //리사이클러뷰 누르면 내용 이어받기
+        intent=getIntent()
+        binding.titleEt.setText(intent.getStringExtra("title1"))
+        binding.todoContentEt.setText(intent.getStringExtra("content1"))
+
+        //다이어리 수정
+//        binding.editNote.setOnClickListener{
+//            val etitle = binding.titleEt.text
+//            val econtent = binding.todoContentEt.text
+//            if (etitle.length<=0 || econtent.length<=0) {
+//                Toast.makeText(this, "제목과 내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
+//            } else {
+//                val etime = format.format(now)
+//                val db = DiaryOpenHelper(this).writableDatabase
+//                db.execSQL("update diarylist set ")
+//                db.close()
+//                Toast.makeText(this, "다이어리가 수정되었습니다.", Toast.LENGTH_SHORT).show()
+//
+//                finish()
+//                startActivity(Intent(this, MainActivity::class.java))
+//            }
+//        }
     }
 
     //뒤로가기 눌렀을때 가는 화면
