@@ -29,12 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         if(count){
             supportFragmentManager.beginTransaction().replace(R.id.main_container, calendarActivity!!).commit()
-            bottom_menu.setSelectedItemId(R.id.calendar);
+            bottom_menu.setSelectedItemId(R.id.calendar)
             count=false
         }
         else{
             supportFragmentManager.beginTransaction().replace(R.id.main_container, diaryActivity!!).commit()
-            bottom_menu.setSelectedItemId(R.id.diary);
+            bottom_menu.setSelectedItemId(R.id.diary)
         }
 
         bottom_menu.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->

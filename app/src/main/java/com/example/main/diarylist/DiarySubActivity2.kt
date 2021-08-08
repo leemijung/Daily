@@ -38,12 +38,12 @@ class DiarySubActivity2 : AppCompatActivity() {
         }
         //저장버튼 클릭시 db에 저장
         binding.addNoteIv.setOnClickListener {
+            val time = format.format(now)
             val title = binding.titleEt.text
             val content = binding.todoContentEt.text
             if (title.length<=0 || content.length<=0) {
                 Toast.makeText(this, "제목과 내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else {
-                val time = format.format(now)
                 val db = DiaryOpenHelper(this).writableDatabase
                 db.execSQL("insert into diarylist values (\'$title\', \'$content\', \'$time\')")
                 db.close()
@@ -57,6 +57,9 @@ class DiarySubActivity2 : AppCompatActivity() {
         intent=getIntent()
         binding.titleEt.setText(intent.getStringExtra("title1"))
         binding.todoContentEt.setText(intent.getStringExtra("content1"))
+//현재 문제점 : db가 수정이 안됨 (이전의 내역들이 같이 나옴), 수정한 일기가 기존의 것이 아닌 새로운 view로 나옴
+
+
 
         //다이어리 수정
 //        binding.editNote.setOnClickListener{
