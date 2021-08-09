@@ -1,5 +1,6 @@
 package com.example.main.diarylist.adapter
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.main.databinding.ItemDiarylistBinding
 import com.example.main.diarylist.DiarySubActivity2
 import com.example.main.diarylist.dia.Diary
+import com.example.main.diarylist.sqlite.DiaryOpenHelper
 import java.util.*
 
 class DiaryAdapter(private var todos: Vector<Diary>, private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -41,10 +43,15 @@ class DiaryAdapter(private var todos: Vector<Diary>, private val context: Contex
 
         //휴지통 누르면 삭제
         holder.binding.diaryDel.setOnClickListener{
+            val openHelper = DiaryOpenHelper(context as Activity)
+            val db = openHelper.writableDatabase
             todos.removeAt(pos)
             notifyItemRemoved(pos)
-
             notifyDataSetChanged()
+            val recyclertitle= binding.todoTitleTv
+            var name = recyclertitle.getText().toString();
+            db.execSQL("DELETE FROM diarylist WHERE title = '" + name + "'")
+            db.close()
         }
     }
 

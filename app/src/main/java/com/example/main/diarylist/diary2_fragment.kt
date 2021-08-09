@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
@@ -32,6 +33,7 @@ class diary2_fragment : Fragment() {
     private lateinit var todies : Vector<Diary>
     private lateinit var adapter : DiaryAdapter
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -44,7 +46,6 @@ class diary2_fragment : Fragment() {
 
         val daylist: RecyclerView = rootView.findViewById(R.id.recyclerView) as RecyclerView
         val addNewTodoFab: FloatingActionButton = rootView.findViewById(R.id.addNewTodoFab) as FloatingActionButton
-        //val diarydel: ImageButton = rootView.findViewById(R.id.diary_del) as ImageButton
 
         daylist.layoutManager =
             LinearLayoutManager(
