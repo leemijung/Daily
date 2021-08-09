@@ -4,6 +4,7 @@ package com.example.main.diarylist.viewmodel
 import com.example.main.diarylist.DiaryActivity2
 import android.content.Context
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import com.example.main.R

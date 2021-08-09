@@ -113,15 +113,18 @@
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
-        <TimePicker
+        <Button
             android:id="@+id/tp_timepicker"
-            android:layout_width="282dp"
-            android:layout_height="99dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/button3"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginBottom="138dp"
-            android:timePickerMode="spinner"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="134dp"
+            android:text="set alarm"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
         <EditText

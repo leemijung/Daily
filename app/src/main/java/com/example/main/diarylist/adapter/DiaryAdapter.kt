@@ -43,6 +43,7 @@ class DiaryAdapter(private var todos: Vector<Diary>, private val context: Contex
         holder.binding.diaryDel.setOnClickListener{
             todos.removeAt(pos)
             notifyItemRemoved(pos)
+
             notifyDataSetChanged()
         }
     }
