@@ -1,9 +1,7 @@
 package com.example.main
 
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.main.diarylist.diary2_fragment
 import com.example.main.todo.*
@@ -12,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 var count=true
 
-class MainActivity : AppCompatActivity() {
+class BottomNavigation : AppCompatActivity() {
 
     var todoActivity: todo_fragment? = null
     var calendarActivity: calendar_fragment? = null
@@ -20,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_bottomnavigation)
 
         todoActivity = todo_fragment()
         calendarActivity = calendar_fragment()
