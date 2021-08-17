@@ -65,20 +65,22 @@ class mainActivity_fragment : Fragment(), CalendarAdapter.OnItemListener {
             startActivity(intent)
         }
 
+        //이전달로 이동
+        val previousMonth = rootView.findViewById<TextView>(R.id.previousMonth)
+        previousMonth.setOnClickListener{
+            CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusMonths(1)
+            setMonthView()
+        }
+        //다음달로 이동
+        val nextMonth = rootView.findViewById<TextView>(R.id.nextMonth)
+        nextMonth.setOnClickListener{
+            CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusMonths(1)
+            setMonthView()
+        }
+
         return rootView
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun previousMonthAction(view: View?) {
-        CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusMonths(1)
-        setMonthView()
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun nextMonthAction(view: View?) {
-        CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusMonths(1)
-        setMonthView()
-    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onItemClick(position: Int, date: LocalDate?) {
