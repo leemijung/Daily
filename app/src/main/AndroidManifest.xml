@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".diarylist.DiarySubActivity2"></activity>
+        <activity android:name=".diarylist.DiarySubActivity2"/>
         <activity android:name=".diarylist.DiaryActivity2" />
         <activity android:name=".DiarySubActivity" />
         <activity android:name=".DiaryActivity" />
@@ -20,12 +20,18 @@
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity android:name=".BottomNavigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WeekViewActivity"/>
+        <activity android:name=".EventEditActivity"/>
+
     </application>
 
 </manifest>

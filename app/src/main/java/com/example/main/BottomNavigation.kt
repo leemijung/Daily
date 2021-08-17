@@ -13,7 +13,7 @@ var count=true
 class BottomNavigation : AppCompatActivity() {
 
     var todoActivity: todo_fragment? = null
-    var calendarActivity: calendar_fragment? = null
+    var calendarActivity: mainActivity_fragment? = null
     var diaryActivity: diary2_fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class BottomNavigation : AppCompatActivity() {
         setContentView(R.layout.activity_bottomnavigation)
 
         todoActivity = todo_fragment()
-        calendarActivity = calendar_fragment()
+        calendarActivity = mainActivity_fragment()
         diaryActivity = diary2_fragment()
         val bottom_menu = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
