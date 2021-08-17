@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.main.BottomNavigation
 import com.example.main.MainActivity
 import com.example.main.R
 import com.example.main.databinding.ActivityDiarySub2Binding
@@ -46,7 +47,7 @@ class DiarySubActivity2 : AppCompatActivity() {
                 Toast.makeText(this, "다이어리가 등록되었습니다.", Toast.LENGTH_SHORT).show()
 
                 finish()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, BottomNavigation::class.java))
             }
         }
         //리사이클러뷰 목록 중 하나 누르면 내용 이어받기
