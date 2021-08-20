@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/background1"
-    tools:context=".EventEditActivity">
+    tools:context=".EventEditActivity"
+    android:background="@color/background1">
 
     <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="일정 이름:"
-        android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/eventNameET"
         android:layout_width="wrap_content"
@@ -28,20 +30,108 @@
         android:id="@+id/eventDateTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30dp"
         android:text="Date"
         android:textSize="20sp"
-        android:textAlignment="center"
         android:textColor="@color/black"/>
     <TextView
         android:id="@+id/eventTimeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:text="Time"
+        android:layout_marginLeft="30dp"
         android:textSize="20sp"
-        android:textAlignment="center"
         android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/eventStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="20dp"
+        android:text="시작일시"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+
+    <Button
+        android:id="@+id/datePickerButton"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="openDatePicker1"
+        android:text="JAN 01 2020"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/timePickerButton"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="openTimePicker1"
+        android:text="00 00 AM"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/eventEND"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="20dp"
+        android:text="마지막일시"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/datePickerButton1"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="openDatePicker2"
+        android:text="JAN 01 2020"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/timePickerButton1"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="openTimePicker2"
+        android:text="00 00 AM"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/alarmbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Alarm"
+        android:background="@color/design_default_color_primary_dark"/>
 
     <Button
         android:layout_marginTop="20dp"

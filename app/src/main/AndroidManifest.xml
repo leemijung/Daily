@@ -11,11 +11,8 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".diarylist.DiarySubActivity2"/>
         <activity android:name=".diarylist.DiaryActivity2" />
-        <activity android:name=".DiarySubActivity" />
         <activity android:name=".DiaryActivity" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
+        <activity android:name=".MainAlarmActivity" />
         <activity android:name=".BottomNavigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

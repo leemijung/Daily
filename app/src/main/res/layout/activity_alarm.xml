@@ -1,46 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="top">
+    tools:context=".MainAlarmActivity">
 
-    <TextView
+    <TimePicker
+        android:id="@+id/timePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="편히 주무세요! 깨워 드릴게요"
-        android:textSize="30sp"
-        android:layout_marginBottom="10dp"/>
+        />
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
-        <TimePicker
-            android:id="@+id/time_picker"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="날짜"
+            />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp" />
+
+        <Button
+            android:id="@+id/btnCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="달력"
+            />
 
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center">
 
         <Button
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:id="@+id/btn_start"
-            android:text="시작"/>
-
-        <Button
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:id="@+id/btn_finish"
-            android:text="종료" />
+            android:id="@+id/btnAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알람 등록"
+            />
 
     </LinearLayout>
 
