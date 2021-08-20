@@ -31,22 +31,13 @@ public class MainAlarmActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_alarm);
 
         this.calendar = Calendar.getInstance();
         // 현재 날짜 표시
         displayDate();
 
         this.timePicker = findViewById(R.id.timePicker);
-
-        Button imageButton = (Button) findViewById(R.id.alarmbtn);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainAlarmActivity.class);
-                startActivity(intent);
-            }
-        });
 
         findViewById(R.id.btnCalendar).setOnClickListener(mClickListener);
         findViewById(R.id.btnAlarm).setOnClickListener(mClickListener);
