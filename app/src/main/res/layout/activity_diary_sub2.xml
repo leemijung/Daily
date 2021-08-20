@@ -31,8 +31,8 @@
                 android:background="@color/background3"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                tools:layout_editor_absoluteY="4dp"
-                tools:srcCompat="@drawable/ic_arrow_left_vector" />
+                app:srcCompat="@drawable/ic_arrow_left_vector"
+                tools:layout_editor_absoluteY="4dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,26 +45,31 @@
                 tools:layout_editor_absoluteX="48dp"
                 tools:layout_editor_absoluteY="18dp" />
 
-            <ImageView
+            <Button
                 android:id="@+id/addNoteIv"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="@color/background3"
                 android:layout_gravity="end"
-                android:background="@color/background3"
-                android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_check_vector"
-                tools:layout_editor_absoluteX="363dp"
-                tools:layout_editor_absoluteY="4dp" />
+                android:text="Save"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="237dp" />
 
-            <ImageView
+            <Button
                 android:id="@+id/editNote"
-                android:layout_width="56dp"
-                android:layout_height="51dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
                 android:background="@color/background3"
-                app:srcCompat="@drawable/ic_edit_vector"
-                tools:layout_editor_absoluteX="303dp"
-                tools:layout_editor_absoluteY="0dp" />
+                android:text="Edit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                tools:layout_editor_absoluteX="262dp"
+                tools:layout_editor_absoluteY="8dp" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -129,6 +134,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

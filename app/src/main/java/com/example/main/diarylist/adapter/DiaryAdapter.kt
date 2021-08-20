@@ -3,6 +3,7 @@ package com.example.main.diarylist.adapter
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import com.example.main.diarylist.DiarySubActivity2
 import com.example.main.diarylist.dia.Diary
 import com.example.main.diarylist.sqlite.DiaryOpenHelper
 import java.util.*
+
 
 class DiaryAdapter(private var todos: Vector<Diary>, private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

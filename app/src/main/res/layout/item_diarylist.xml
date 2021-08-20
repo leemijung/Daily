@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/diary_del"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/noteDateTv"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_delete_vector" />
+            app:srcCompat="@android:drawable/ic_menu_delete" />
 
         <TextView
             android:id="@+id/noteDateTv"
@@ -52,6 +52,7 @@
             android:gravity="center|end"
             android:paddingStart="0dp"
             android:paddingEnd="16dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/diaryContentTv"
             app:layout_constraintEnd_toStartOf="@+id/diary_del"
             app:layout_constraintStart_toEndOf="@+id/todoTitleTv"

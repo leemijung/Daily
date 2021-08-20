@@ -25,11 +25,20 @@ class mainActivity_fragment : Fragment(), CalendarAdapter.OnItemListener {
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
+    fun setMonthView() {
+        monthYearText!!.text = CalendarUtils.monthYearFromDate(CalendarUtils.selectedDate)
+        val daysInMonth = CalendarUtils.daysInMonthArray(CalendarUtils.selectedDate)
+        val calendarAdapter = CalendarAdapter(daysInMonth, this)
+        val layoutManager: RecyclerView.LayoutManager =
+            GridLayoutManager(context, 7)
+        calendarRecyclerView!!.layoutManager = layoutManager
+        calendarRecyclerView!!.adapter = calendarAdapter
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-
-
     ): View {
 
         val rootView = inflater.inflate(
@@ -39,14 +48,14 @@ class mainActivity_fragment : Fragment(), CalendarAdapter.OnItemListener {
         ) as ViewGroup
 
 
-
-        calendarRecyclerView = rootView.findViewById(R.id.calendarRecyclerView)
-        monthYearText = rootView.findViewById(R.id.monthYearTV)
-
-
-
+        fun initWidgets() {
+            calendarRecyclerView = rootView.findViewById<RecyclerView>(R.id.calendarRecyclerView)
+            monthYearText = rootView.findViewById<TextView>(R.id.monthYearTV)
+        }
 
 
+
+        initWidgets()
         CalendarUtils.selectedDate = LocalDate.now()
         setMonthView()
 
@@ -72,15 +81,6 @@ class mainActivity_fragment : Fragment(), CalendarAdapter.OnItemListener {
         return rootView
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun setMonthView() {
-        monthYearText!!.text = CalendarUtils.monthYearFromDate(CalendarUtils.selectedDate)
-        val daysInMonth = CalendarUtils.daysInMonthArray(CalendarUtils.selectedDate)
-        val calendarAdapter = CalendarAdapter(daysInMonth, this)
-        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(context, 7)
-        calendarRecyclerView!!.layoutManager = layoutManager
-        calendarRecyclerView!!.adapter = calendarAdapter
-    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onItemClick(position: Int, date: LocalDate?) {
@@ -88,5 +88,9 @@ class mainActivity_fragment : Fragment(), CalendarAdapter.OnItemListener {
             CalendarUtils.selectedDate = date
             setMonthView()
         }
+    }
+
+    override fun initWidgets() {
+
     }
 }
