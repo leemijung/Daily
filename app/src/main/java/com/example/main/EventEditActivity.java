@@ -16,6 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.example.main.R;
 
@@ -217,9 +218,14 @@ public class EventEditActivity extends AppCompatActivity {
 
     public void saveEventAction(View view) {
         String eventName=eventNameET.getText().toString();
-        Event newEvent = new Event(eventName, CalendarUtils.selectedDate, time);
-        Event.eventsList.add(newEvent);
-        finish();
+        if(!eventName.equals("")){
+            Event newEvent = new Event(eventName, CalendarUtils.selectedDate, time);
+            Event.eventsList.add(newEvent);
+            finish();
+        }
+        else{
+            Toast.makeText(this, "일정을 입력하세요", Toast.LENGTH_LONG).show();
+        }
     }
 
     public void openDatePicker1(View view)

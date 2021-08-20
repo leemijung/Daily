@@ -107,6 +107,7 @@ public class MainAlarmActivity extends AppCompatActivity {
                 case R.id.btnAlarm:
                     // 알람 등록
                     setAlarm();
+                    finish();
 
                     break;
             }
