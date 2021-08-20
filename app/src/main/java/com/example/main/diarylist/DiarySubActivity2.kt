@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.main.BottomNavigation
-import com.example.main.MainActivity
 import com.example.main.R
 import com.example.main.databinding.ActivityDiarySub2Binding
 import com.example.main.diarylist.sqlite.DiaryOpenHelper
@@ -70,14 +69,14 @@ class DiarySubActivity2 : AppCompatActivity() {
                 db.close()
                 Toast.makeText(this, "다이어리가 수정되었습니다.", Toast.LENGTH_SHORT).show()
                 finish()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, BottomNavigation::class.java))
             }
         }
     }
 
     //뒤로가기 눌렀을때 가는 화면
     override fun onBackPressed() {
-        startActivity(Intent(this, DiaryActivity2::class.java))
+        startActivity(Intent(this, BottomNavigation::class.java))
         finish()
     }
 }

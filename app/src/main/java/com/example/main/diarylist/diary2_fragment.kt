@@ -1,29 +1,18 @@
 package com.example.main.diarylist
 
-import android.R.attr.data
 import android.app.Activity
 import android.content.Intent
-import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.main.DiarySubActivity
 import com.example.main.R
-import com.example.main.databinding.ActivityDiary2Binding
 import com.example.main.diarylist.adapter.DiaryAdapter
 import com.example.main.diarylist.dia.Diary
 import com.example.main.diarylist.sqlite.DiaryOpenHelper
-import com.example.main.diarylist.viewmodel.MainModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
 

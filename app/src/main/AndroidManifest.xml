@@ -13,15 +13,9 @@
         <activity android:name=".diarylist.DiaryActivity2" />
         <activity android:name=".DiarySubActivity" />
         <activity android:name=".DiaryActivity" />
-        <activity android:name=".AlarmActivity"/>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
         <activity android:name=".BottomNavigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
